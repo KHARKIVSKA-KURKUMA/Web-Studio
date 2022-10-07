@@ -16,30 +16,32 @@
 
   <body>
     <header class="header">
-      <a href="" class="header-logo" lang="en">
+      <a href="" class="header-logo link" lang="en">
         Web<span class="black">Studio</span>
       </a>
       <nav class="header-nav">
-        <ul class="header-list">
+        <ul class="header-list list">
           <li class="header-item">
-            <a href="" class="header-link">Студія</a>
+            <a href="index.html" class="header-link link">Студія</a>
           </li>
           <li class="header-item">
-            <a href="portfolio.html" class="header-link">Портфоліо</a>
+            <a href="portfolio.html" class="header-link link">Портфоліо</a>
           </li>
           <li class="header-item">
-            <a href="" class="header-link">Контакти</a>
+            <a href="" class="header-link link">Контакти</a>
           </li>
         </ul>
       </nav>
-      <ul class="header-contact">
-        <li>
-          <a href="mailto:info@devstudio.com" class="header-mail"
+      <ul class="header-list-address list">
+        <li class="header-list-item">
+          <a href="mailto:info@devstudio.com" class="header-mail link"
             >info@devstudio.com</a
           >
         </li>
-        <li>
-          <a href="tel:+380961111111" class="header-tel">+38 096 111 11 11</a>
+        <li class="header-list-item">
+          <a href="tel:+380961111111" class="header-tel link"
+            >+38 096 111 11 11</a
+          >
         </li>
       </ul>
     </header>
@@ -49,8 +51,8 @@
         <button type="button" class="order-btn">Замовити послугу</button>
       </section>
       <section class="features">
-        <h2 class="features-heading">Наші особливості</h2>
-        <ul class="features-list">
+        <h2 class="features-heading-hide">Наші особливості</h2>
+        <ul class="features-list list">
           <li class="features-item">
             <h3 class="features-subject">Увага до деталей</h3>
             <p class="features-desc">
@@ -81,26 +83,29 @@
         </ul>
       </section>
       <section>
-        <h2>Чим ми займаємось</h2>
-        <ul>
-          <li>
+        <h2 class="benefits-heading">Чим ми займаємось</h2>
+        <ul class="benefits-list list">
+          <li class="benefits-item">
             <img
+              class="benefits-pic"
               src="./images/img-1.jpg"
               alt="заняття"
               width="370"
               height="294"
             />
           </li>
-          <li>
+          <li class="benefits-item">
             <img
+              class="benefits-pic"
               src="./images/img-2.jpg"
               alt="заняття"
               width="370"
               height="294"
             />
           </li>
-          <li>
+          <li class="benefits-item">
             <img
+              class="benefits-pic"
               src="./images/img-2.jpg"
               alt="заняття"
               width="370"
@@ -111,60 +116,70 @@
       </section>
       <section class="team">
         <h2 class="team-heading">Наша команда</h2>
-        <ul class="team-list">
-          <li class="team-item">
+        <ul class="team-list list">
+          <li class="team-employee">
             <img
+              class="team-foto"
               src="./images/ihor.jpg"
               alt="працівник1"
               width="270"
               height="260"
             />
-            <b>Ігор Дем'яненко</b>
-            <p lang="en">Product Designer</p>
+            <b class="team-employee-name">Ігор Дем'яненко</b>
+            <p lang="en" class="team-employee-position">Product Designer</p>
           </li>
-          <li class="team-item">
+          <li class="team-employee">
             <img
+              class="team-foto"
               src="./images/olha.jpg"
               alt="працівник2"
               width="270"
               height="260"
             />
-            <b>Ольга Рєпіна</b>
-            <p lang="en">Frontend Developer</p>
+            <b class="team-employee-name">Ольга Рєпіна</b>
+            <p lang="en" class="team-employee-position">Frontend Developer</p>
           </li>
-          <li class="team-item">
+          <li class="team-employee">
             <img
+              class="team-foto"
               src="./images/nikolai.jpg"
               alt="працівник3"
               width="270"
               height="260"
             />
-            <b>Микола Тарасов</b>
-            <p lang="en">Marketing</p>
+            <b class="team-employee-name">Микола Тарасов</b>
+            <p lang="en" class="team-employee-position">Marketing</p>
           </li>
-          <li class="team-item">
+          <li class="team-employee">
             <img
+              class="team-foto"
               src="./images/mihail.jpg"
               alt="працівник4"
               width="270"
               height="260"
             />
-            <b>Михайло Єрмаков</b>
-            <p lang="en">UI Designer</p>
+            <b class="team-employee-name">Михайло Єрмаков</b>
+            <p lang="en" class="team-employee-position">UI Designer</p>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
-      <a href="" lang="en"> Web<span class="black">Studio</span> </a>
-      <address>
-        <p>м. Київ, пр-т Лесі Українки, 26</p>
-        <ul>
-          <li>
-            <a href="mailto:info@example.com">info@example.com</a>
+    <footer class="footer">
+      <a href="" class="footer-logo link" lang="en">
+        Web<span class="white">Studio</span>
+      </a>
+      <address class="footer-meta">
+        <p class="footer-address link">м. Київ, пр-т Лесі Українки, 26</p>
+        <ul class="footer-list list">
+          <li class="footer-item">
+            <a href="mailto:info@example.com" class="footer-mail link"
+              >info@example.com</a
+            >
           </li>
-          <li>
-            <a href="tel:+380991111111">+38 099 111 11 11</a>
+          <li class="footer-item">
+            <a href="tel:+380991111111" class="footer-tel link"
+              >+38 099 111 11 11</a
+            >
           </li>
         </ul>
       </address>
