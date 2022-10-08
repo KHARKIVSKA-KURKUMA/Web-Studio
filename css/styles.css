@@ -132,6 +132,9 @@ body {
 
 /*TEAM*/
 
+.team {
+  background: #f5f4fa;
+}
 .team-heading {
   font-weight: 700;
   font-size: 36px;
