@@ -1,6 +1,12 @@
+:root {
+  --blue: #2196f3;
+  --black: #212121;
+  --white: #ffffff;
+  --gray: #757575;
+}
 body {
   font-family: 'Roboto', sans-serif;
-  color: #212121;
+  color: var(--black);
 }
 .link {
   text-decoration: none;
@@ -19,25 +25,13 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--blue);
 }
 .black {
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   color: #000000;
 }
 .white {
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white);
 }
 .header-link {
   font-weight: 500;
@@ -45,31 +39,20 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.header-link:hover {
-  color: #2196f3;
-}
+.header-link:hover,
 .header-link:focus {
-  color: #2196f3;
+  color: var(--blue);
 }
-.header-mail,
-.header-tel {
+.header-contact {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--gray);
 }
-.header-mail:hover {
-  color: #2196f3;
-}
-.header-tel:hover {
-  color: #2196f3;
-}
-.header-mail:focus {
-  color: #2196f3;
-}
-.header-tel:focus {
-  color: #2196f3;
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--blue);
 }
 
 /*ORDER*/
@@ -84,7 +67,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white);
 }
 .order-btn {
   font-weight: 700;
@@ -94,14 +77,13 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
 }
 
 /*FEATURES*/
 
 .features-heading-hide,
-.menu-heading-hide,
 .content-heading-hide {
   color: transparent;
   font-size: 0;
@@ -117,7 +99,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--gray);
 }
 
 /*BENEFITS*/
@@ -154,7 +136,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--gray);
 }
 
 /*FOOTER*/
@@ -167,10 +149,9 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white);
 }
-.footer-mail,
-.footer-tel {
+.footer-contact {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -178,36 +159,32 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/*MENU*/
+/*CONTENT*/
 
-.menu-btn {
+.content-btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--black);
   cursor: pointer;
 }
-.menu-btn:hover {
-  color: #ffffff;
+.content-btn:hover,
+.content-btn:focus {
+  color: var(--white);
+  background-color: var(--blue);
 }
-.menu-btn:focus {
-  color: #ffffff;
-}
-
-/*CONTENT*/
-
 .content-caption {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--black);
 }
 .content-subtitle {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--gray);
 }
