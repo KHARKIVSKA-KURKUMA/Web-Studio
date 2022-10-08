@@ -89,7 +89,6 @@ body {
   font-size: 0;
 }
 .features-subject {
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -105,7 +104,6 @@ body {
 /*BENEFITS*/
 
 .benefits-heading {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -118,7 +116,6 @@ body {
   background: #f5f4fa;
 }
 .team-heading {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -176,7 +173,6 @@ body {
   background-color: var(--blue);
 }
 .content-caption {
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
