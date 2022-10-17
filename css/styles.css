@@ -6,6 +6,22 @@
   --white-headline: #ffffff;
   --hover-focus-btn: #ffffff;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--black);
@@ -30,7 +46,9 @@ body {
   margin: -1px;
 }
 
-/*HEADER*/
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
 
 .header-logo,
 .footer-logo {
@@ -70,7 +88,7 @@ body {
   color: var(--hover-focus-link);
 }
 
-/*ORDER*/
+/* ---------------------------------- ORDER --------------------------------- */
 
 .order {
   background: #2f303a;
@@ -96,7 +114,7 @@ body {
   cursor: pointer;
 }
 
-/*FEATURES*/
+/* -------------------------------- FEATURES -------------------------------- */
 
 .features-subject {
   font-size: 14px;
@@ -111,7 +129,7 @@ body {
   color: #757575;
 }
 
-/*BENEFITS*/
+/* -------------------------------- BENEFITS -------------------------------- */
 
 .benefits-heading {
   font-size: 36px;
@@ -120,7 +138,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/*TEAM*/
+/* ---------------------------------- TEAM ---------------------------------- */
 
 .team {
   background: #f5f4fa;
@@ -146,7 +164,7 @@ body {
   color: #757575;
 }
 
-/*FOOTER*/
+/* --------------------------------- FOOTER --------------------------------- */
 
 .footer {
   background: #2f303a;
@@ -166,7 +184,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/*CONTENT*/
+/* --------------------------------- CONTENT -------------------------------- */
 
 .content-btn {
   font-weight: 500;
