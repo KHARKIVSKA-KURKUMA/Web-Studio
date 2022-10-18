@@ -22,15 +22,35 @@ ul {
   padding-left: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--black);
 }
+
 .link {
   text-decoration: none;
 }
+
 .list {
   list-style-type: none;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -46,9 +66,13 @@ body {
   margin: -1px;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   HEADER                                   */
-/* -------------------------------------------------------------------------- */
+/* --------------------------------- HEADER --------------------------------- */
+
+.header {
+  padding-top: 22px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
 
 .header-logo,
 .footer-logo {
@@ -91,6 +115,8 @@ body {
 /* ---------------------------------- ORDER --------------------------------- */
 
 .order {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background: #2f303a;
 }
 .order-headline {
@@ -101,6 +127,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-headline);
+  margin-bottom: 30px;
+  max-width: 696px;
 }
 .order-btn {
   font-weight: 700;
@@ -111,43 +139,54 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  cursor: pointer;
 }
 
 /* -------------------------------- FEATURES -------------------------------- */
-
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .features-subject {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .features-desc {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+  max-width: 270px;
 }
 
 /* -------------------------------- BENEFITS -------------------------------- */
 
+.benefits {
+  padding-bottom: 94px;
+}
 .benefits-heading {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 
 /* ---------------------------------- TEAM ---------------------------------- */
 
 .team {
   background: #f5f4fa;
+  padding-top: 94px;
+  padding-left: 94px;
 }
 .team-heading {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 .team-employee-name {
   font-weight: 500;
@@ -155,6 +194,8 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-employee-position {
   font-size: 16px;
@@ -162,22 +203,28 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 30px;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
 
 .footer {
   background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-address {
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+.footer-item {
+  margin-bottom: 9px;
 }
 .footer-contact {
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -186,6 +233,14 @@ body {
 
 /* --------------------------------- CONTENT -------------------------------- */
 
+.content {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.content-list-btn {
+  padding-bottom: 16px;
+  margin-bottom: 34px;
+}
 .content-btn {
   font-weight: 500;
   font-size: 16px;
@@ -193,22 +248,25 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  cursor: pointer;
 }
 .content-btn:hover,
 .content-btn:focus {
   color: var(--hover-focus-btn);
   background-color: #2196f3;
 }
+
 .content-caption {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 .content-subtitle {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 20px;
 }
