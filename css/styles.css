@@ -53,6 +53,11 @@ body {
   margin: 0 auto;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -117,7 +122,7 @@ body {
 .order {
   padding-top: 200px;
   padding-bottom: 200px;
-  background: #2f303a;
+  background: rgba(47, 48, 58, 1);
 }
 .order-headline {
   font-weight: 900;
@@ -129,23 +134,23 @@ body {
   color: var(--white-headline);
   margin-bottom: 30px;
   max-width: 696px;
+  margin: 0 auto;
 }
 .order-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
+  margin: 0 auto;
+  background-color: rgba(33, 150, 243, 1);
 }
 
 /* -------------------------------- FEATURES -------------------------------- */
-.features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .features-subject {
   font-size: 14px;
   line-height: 1.14;
@@ -178,8 +183,6 @@ body {
 
 .team {
   background: #f5f4fa;
-  padding-top: 94px;
-  padding-left: 94px;
 }
 .team-heading {
   font-size: 36px;
@@ -188,22 +191,30 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+.team-employee {
+  width: 270px;
+  height: 368px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-info {
+  padding: 30px 5px;
+}
 .team-employee-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-employee-position {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: #757575;
-  margin-bottom: 30px;
 }
 
 /* --------------------------------- FOOTER --------------------------------- */
@@ -233,10 +244,6 @@ body {
 
 /* --------------------------------- CONTENT -------------------------------- */
 
-.content {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .content-list-btn {
   padding-bottom: 16px;
   margin-bottom: 34px;
@@ -254,13 +261,19 @@ body {
   color: var(--hover-focus-btn);
   background-color: #2196f3;
 }
-
+.content-item {
+  width: 370px;
+  height: 404px;
+  border: 1px solid rgba(238, 238, 238, 1);
+}
+.content-container {
+  padding: 20px 24px;
+}
 .content-caption {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
-  margin-top: 20px;
   margin-bottom: 4px;
 }
 .content-subtitle {
@@ -268,5 +281,4 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: 20px;
 }
