@@ -283,6 +283,7 @@ body {
   justify-content: center;
 }
 .content-btn {
+  height: 38px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
