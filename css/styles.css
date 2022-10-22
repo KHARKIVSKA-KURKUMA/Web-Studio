@@ -52,7 +52,6 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 4px solid chartreuse;
 }
 
 .section {
@@ -191,6 +190,23 @@ body {
   display: flex;
   column-gap: 30px;
 }
+.features-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-color-2);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.features-icon-link:hover,
+.features-icon-link:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.features-icon {
+  fill: var(--black);
+}
 .features-subject {
   font-size: 14px;
   line-height: 1.14;
@@ -292,6 +308,43 @@ body {
   fill: var(--white-color);
 }
 
+/* --------------------------------- CLIENTS -------------------------------- */
+
+.clients-headline {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  padding-top: 94px;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  column-gap: 30px;
+  padding-bottom: 94px;
+}
+.clients-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons);
+  border-radius: 5px;
+  background-color: transparent;
+}
+.clients-icon {
+  fill: var(--icons);
+}
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-icon-link:hover .clients-icon,
+.clients-icon-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
 /* --------------------------------- FOOTER --------------------------------- */
 
 .footer {
