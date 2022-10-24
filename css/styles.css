@@ -303,7 +303,6 @@ body {
 .team-soc-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .team-soc-link:hover .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
