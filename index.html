@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
+  <body data-no-scroll>
     <!-- ------------------------------- HEADER -------------------------------- -->
     <header class="header">
       <div class="container">
@@ -68,7 +68,9 @@
       <section class="order">
         <div class="container">
           <h1 class="order-headline">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="order-btn">Замовити послугу</button>
+          <button type="button" class="order-btn" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- ----------------------------------------------------------------------- -->
@@ -446,5 +448,17 @@
       </div>
     </footer>
     <!-- ----------------------------------------------------------------------- -->
+    <!-- -------------------------------- MODAL -------------------------------- -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
