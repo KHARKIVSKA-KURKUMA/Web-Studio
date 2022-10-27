@@ -6,6 +6,7 @@
   --background-color: #2f303a;
   --background-color-2: #f5f4fa;
   --icons: #afb1b8;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -58,9 +59,6 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.active-pages {
-  color: var(--accent-color);
-}
 
 .visually-hidden {
   position: absolute;
@@ -106,25 +104,41 @@ body {
 .header-list {
   display: flex;
   column-gap: 50px;
-  padding-top: 22px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition);
 }
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
 }
+.active-pages {
+  color: var(--accent-color);
+  position: relative;
+}
+.active-pages::after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  top: 47px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
 .header-list-address {
   margin-left: auto;
   display: flex;
   column-gap: 50px;
-  padding-top: 22px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-contact {
   font-weight: 500;
@@ -132,10 +146,12 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--grey-color);
+  transition: color var(--transition);
 }
 .header-contact-icon {
   fill: var(--icons);
   margin-right: 10px;
+  transition: fill var(--transition);
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -240,6 +256,23 @@ body {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
+.benefits-inner {
+  position: relative;
+}
+.benefits-desc {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
 
 /* ---------------------------------- TEAM ---------------------------------- */
 
@@ -295,9 +328,11 @@ body {
   align-items: center;
   width: 44px;
   height: 44px;
+  transition: border-radius, background-color var(--transition);
 }
 .team-soc-icon {
   fill: var(--icons);
+  transition: fill var(--transition);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -334,9 +369,11 @@ body {
   border: 1px solid var(--icons);
   border-radius: 5px;
   background-color: transparent;
+  transition: border var(--transition);
 }
 .clients-icon {
   fill: var(--icons);
+  transition: fill var(--transition);
 }
 .clients-icon-link:hover,
 .clients-icon-link:focus {
@@ -355,10 +392,6 @@ body {
 }
 .footer .container {
   display: flex;
-}
-.footer-column {
-  display: flex;
-  flex-direction: column;
 }
 .footer-address {
   font-size: 14px;
@@ -379,6 +412,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition);
 }
 .footer-contact:focus,
 .footer-contact:hover {
@@ -411,7 +445,7 @@ body {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: background-color, border-radius, var(--transition);
 }
 .footer-soc-icon {
   fill: var(--white-color);
@@ -420,7 +454,6 @@ body {
 .footer-soc-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* --------------------------------- CONTENT -------------------------------- */
@@ -442,6 +475,8 @@ body {
   border: transparent;
   border-radius: 4px;
   padding: 6px 22px;
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
 }
 .active-btn {
   color: var(--white-color);
@@ -465,10 +500,33 @@ body {
 .content-item {
   width: 370px;
   height: 404px;
+  transition: box-shadow var(--transition);
+}
+.content-holder {
+  position: relative;
+  overflow: hidden;
+}
+.content-desk {
+  position: absolute;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  top: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform var(--transition);
+  overflow: auto;
 }
 .content-item:hover,
 .content-item:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content-item:hover .content-desk,
+.content-item:focus .content-desk {
+  transform: translateY(0%);
 }
 .content-container {
   padding: 20px 24px;
