@@ -437,7 +437,6 @@ body {
   display: flex;
   column-gap: 10px;
 }
-
 .footer-soc-link {
   display: flex;
   width: 44px;
@@ -455,6 +454,70 @@ body {
 .footer-soc-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+}
+.footer-form {
+  display: flex;
+}
+.footer-input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 93px;
+  justify-content: center;
+}
+.footer-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding-bottom: 20px;
+}
+.footer-input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+}
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-btn-container {
+  display: flex;
+}
+.footer-form-btn {
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  justify-content: center;
+}
+.send-icon {
+  margin-left: 10px;
+  fill: var(--white-color);
 }
 
 /* --------------------------------- CONTENT -------------------------------- */
@@ -583,6 +646,13 @@ body {
   height: 30px;
   background-color: var(--white-color);
 }
+.modal-close-icon {
+  transition: fill var(--transition);
+}
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--accent-color);
+}
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -597,27 +667,50 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 10px;
   cursor: pointer;
+  padding-left: 42px;
+  transition: outline-color var(--transition);
 }
-.form-input::last-child {
-  margin-bottom: 0;
+.form-input:focus {
+  outline-color: var(--accent-color);
+}
+.input-wrap {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: fill var(--transition);
+}
+.form-input:focus + .input-icon {
+  fill: var(--accent-color);
+}
+.input-filed {
+  margin-bottom: 10px;
+}
+.input-filed-comment {
+  margin-bottom: 20px;
 }
 .form-input-comment {
   width: 100%;
   height: 120px;
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
   cursor: pointer;
+  transition: outline-color var(--transition);
 }
 .form-input-comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.form-input-comment:focus {
+  outline-color: var(--accent-color);
 }
 .form-btn-send {
   font-family: 'Roboto';
@@ -653,11 +746,37 @@ body {
   justify-content: center;
 }
 .agreement-desk {
-  margin-left: 8px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--grey-color);
+  display: flex;
+  align-items: center;
+}
+.agreement-desk span {
+  width: 16px;
+  height: 15px;
+  border-radius: 4px;
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+.check-icon {
+  fill: transparent;
+  transition: fill var(--transition);
+}
+.agreement-checkbox:focus + .agreement-desk span {
+  border-color: var(--accent-color);
+}
+.agreement-checkbox:checked + .agreement-desk span {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.agreement-checkbox:checked + .agreement-desk .check-icon {
+  fill: var(--white-color);
 }
 .agreement-link {
   font-size: 14px;
@@ -665,6 +784,7 @@ body {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
+  padding-left: 2px;
 }
 
 .is-hidden {
