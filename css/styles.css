@@ -395,6 +395,7 @@ body {
 }
 .footer .container {
   display: flex;
+  justify-content: space-between;
 }
 .footer-address {
   font-size: 14px;
