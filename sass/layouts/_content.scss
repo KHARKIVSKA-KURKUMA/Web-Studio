@@ -1,0 +1,88 @@
+.content-list-btn {
+  margin-bottom: 50px;
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+}
+.content-btn {
+  height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $black;
+  border: transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: color $transition, background-color $transition,
+    box-shadow $transition;
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    background-color: $accentColor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.active-btn {
+  color: $whiteColor;
+  background-color: $accentColor;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.content-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.content-item {
+  width: 370px;
+  height: 404px;
+  transition: box-shadow $transition;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.content-holder {
+  position: relative;
+  overflow: hidden;
+}
+.content-desk {
+  position: absolute;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $whiteColor;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  top: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform $transition;
+  overflow: auto;
+  .content-item:hover &,
+  .content-item:focus & {
+    transform: translateY(0%);
+  }
+}
+.content-container {
+  padding: 20px 24px;
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-top: transparent;
+}
+.content-caption {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $black;
+  margin-bottom: 4px;
+}
+.content-subtitle {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: $greyColor;
+}
