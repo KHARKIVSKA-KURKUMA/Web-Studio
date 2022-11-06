@@ -1,26 +1,25 @@
 .header {
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
-  .container {
+  border-bottom: 1px solid $headerBorder;
+  &__container {
     @extend %align-centering;
   }
 }
-
-.header-logo {
+.header__logo {
   @extend %logo-styles;
   span {
     color: $black;
   }
 }
-.header-nav {
+.header__navigation {
   margin-left: 93px;
 }
-.header-list {
+.navigation__list {
   display: flex;
   column-gap: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header-link {
+.navigation__link {
   @include text-base(500, 14px, 1.14, 0.02em);
   color: $black;
   transition: color $transition;
@@ -29,29 +28,14 @@
     color: $accentColor;
   }
 }
-.active-pages {
-  color: $accentColor;
-  position: relative;
-  &::after {
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    left: 0;
-    bottom: 0;
-    top: 47px;
-    background-color: $accentColor;
-    border-radius: 2px;
-  }
-}
-.header-list-address {
+.header__connect {
   margin-left: auto;
   display: flex;
   column-gap: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.header-contact {
+.connect__contact {
   @include text-base(500, 14px, 1.14, 0.02em);
   color: $greyColor;
   transition: color $transition;
@@ -60,12 +44,12 @@
     color: $accentColor;
   }
 }
-.header-contact-icon {
+.connect__icon {
   fill: $icons;
   margin-right: 10px;
   transition: fill $transition;
-  .header-contact:hover &,
-  .header-contact:focus & {
+  .connect__contact:hover &,
+  .connect__contact:focus & {
     fill: $accentColor;
   }
 }

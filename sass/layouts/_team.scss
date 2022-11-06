@@ -1,42 +1,42 @@
 .team {
   background: $colorBackground;
 }
-.team-heading {
+.team__heading {
   @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
   margin-bottom: 50px;
 }
-.team-list {
+.team__list {
   display: flex;
   column-gap: 30px;
 }
-.team-employee {
+.team__item {
   width: 428px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-info {
+.team__employee {
   padding: 30px 5px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 0px 0px 4px 4px;
 }
-.team-employee-name {
+.employee__name {
   @include text-base(500, 16px, 1.19, 0.03em);
   text-align: center;
   margin-bottom: 10px;
 }
-.team-employee-position {
+.employee__position {
   @include text-base(null, 16px, 1.19, 0.03em);
   text-align: center;
   color: $greyColor;
   margin-bottom: 16px;
 }
-.team-soc-list {
+.employee__soc {
   @extend %centering;
   column-gap: 10px;
 }
-.team-soc-link {
+.employee__link {
   @extend %centering;
   align-items: center;
   width: 44px;
@@ -49,11 +49,11 @@
     border-radius: 50%;
   }
 }
-.team-soc-icon {
+.employee__icon {
   fill: $icons;
   transition: fill $transition;
-  .team-soc-link:hover &,
-  .team-soc-link:focus & {
+  .employee__link:hover &,
+  .employee__link:focus & {
     fill: $whiteColor;
   }
 }

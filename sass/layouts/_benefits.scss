@@ -1,19 +1,19 @@
 .benefits {
   padding-bottom: 94px;
 }
-.benefits-list {
-  display: flex;
-  column-gap: 30px;
-}
-.benefits-heading {
+.benefits__heading {
   @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
   margin-bottom: 50px;
 }
-.benefits-inner {
+.benefits__list {
+  display: flex;
+  column-gap: 30px;
+}
+.benefits__inner {
   position: relative;
 }
-.benefits-desc {
+.benefits__desc {
   @include text-base(null, 14px, 1.14, 0.03em);
   text-align: center;
   text-transform: uppercase;

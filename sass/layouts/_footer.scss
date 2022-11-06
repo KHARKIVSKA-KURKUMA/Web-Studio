@@ -2,30 +2,30 @@
   background: $backgroundColor;
   padding-top: 60px;
   padding-bottom: 60px;
-  .container {
+  &__container {
     display: flex;
     justify-content: space-between;
   }
 }
-.footer-logo {
+.footer__logo {
   @extend %logo-styles;
   span {
     color: $whiteColor;
   }
 }
-.footer-address {
+.meta__address {
   @include text-base(null, 14px, 1.71, 0.03em);
   color: $whiteColor;
   margin-top: 20px;
   margin-bottom: 9px;
 }
-.footer-item {
+.meta__item {
   margin-bottom: 9px;
   &:nth-last-child(1) {
     margin-bottom: 0;
   }
 }
-.footer-contact {
+.meta__contact {
   @include text-base(null, 14px, 1.71, 0.03em);
   color: rgba(255, 255, 255, 0.6);
   transition: color $transition;
@@ -34,22 +34,22 @@
     color: $accentColor;
   }
 }
-.footer-title {
+.footer__social {
+  @extend %centering;
+  flex-direction: column;
+  margin-left: 70px;
+}
+.social__title {
   color: $whiteColor;
   @include text-base(700, 14px, 1.71, 0.03em);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.footer-social {
-  @extend %centering;
-  flex-direction: column;
-  margin-left: 70px;
-}
-.footer-soc-list {
+.social__list {
   display: flex;
   column-gap: 10px;
 }
-.footer-soc-link {
+.social__link {
   @extend %centering;
   width: 44px;
   height: 44px;
@@ -63,15 +63,25 @@
     border-radius: 50%;
   }
 }
-.footer-soc-icon {
+.social__icon {
   fill: $whiteColor;
 }
-.footer-input-wrap {
+.footer__subscribe {
   @extend %centering;
   flex-direction: column;
   margin-left: 93px;
 }
-.footer-input {
+.subscribe__title {
+  color: $whiteColor;
+  @include text-base(700, 14px, 1.71, 0.03em);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
+}
+.footer__send {
+  display: flex;
+}
+.send__input {
   width: 358px;
   height: 50px;
   background-color: transparent;
@@ -87,11 +97,7 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
-.footer-btn-container {
-  display: flex;
-  margin-top: 20px;
-}
-.footer-form-btn {
+.send__btn {
   @include text-base(700, 16px, 1.88, 0.06em);
   width: 200px;
   height: 50px;
@@ -106,7 +112,7 @@
   box-shadow: $shadow;
   border-radius: 4px;
 }
-.send-icon {
+.send__icon {
   margin-left: 10px;
   fill: $whiteColor;
 }

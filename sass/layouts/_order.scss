@@ -13,7 +13,7 @@
   max-width: 1600px;
   margin: 0 auto;
 }
-.order-headline {
+.order__headline {
   @include text-base(900, 44px, 1.36, 0.06em);
   text-align: center;
   text-transform: uppercase;
@@ -22,7 +22,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
-.order-btn {
+.order__btn {
   @include text-base(700, 16px, 1.88, 0.06em);
   min-width: 216px;
   height: 50px;

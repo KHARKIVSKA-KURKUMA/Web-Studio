@@ -1,16 +1,16 @@
-.clients-headline {
+.clients__headline {
   @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
   color: $black;
   padding-top: 94px;
   margin-bottom: 50px;
 }
-.clients-list {
+.clients__list {
   display: flex;
   column-gap: 30px;
   padding-bottom: 94px;
 }
-.clients-icon-link {
+.clients__link {
   @extend %centering;
   align-items: center;
   width: 170px;
@@ -24,11 +24,11 @@
     border: 1px solid $accentColor;
   }
 }
-.clients-icon {
+.clients__icon {
   fill: $icons;
   transition: fill $transition;
-  .clients-icon-link:hover &,
-  .clients-icon-link:focus & {
+  .clients__link:hover &,
+  .clients__link:focus & {
     fill: $accentColor;
   }
 }
