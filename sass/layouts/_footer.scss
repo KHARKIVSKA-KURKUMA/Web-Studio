@@ -8,21 +8,13 @@
   }
 }
 .footer-logo {
-  font-family: 'Raleway', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: $accentColor;
-}
-.white {
-  color: $whiteColor;
+  @extend %logo-styles;
+  span {
+    color: $whiteColor;
+  }
 }
 .footer-address {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.71, 0.03em);
   color: $whiteColor;
   margin-top: 20px;
   margin-bottom: 9px;
@@ -34,9 +26,7 @@
   }
 }
 .footer-contact {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.71, 0.03em);
   color: rgba(255, 255, 255, 0.6);
   transition: color $transition;
   &:focus,
@@ -46,17 +36,13 @@
 }
 .footer-title {
   color: $whiteColor;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include text-base(700, 14px, 1.71, 0.03em);
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-weight: 700;
 }
 .footer-social {
-  display: flex;
+  @extend %centering;
   flex-direction: column;
-  justify-content: center;
   margin-left: 70px;
 }
 .footer-soc-list {
@@ -64,10 +50,9 @@
   column-gap: 10px;
 }
 .footer-soc-link {
-  display: flex;
+  @extend %centering;
   width: 44px;
   height: 44px;
-  justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -82,29 +67,23 @@
   fill: $whiteColor;
 }
 .footer-input-wrap {
-  display: flex;
+  @extend %centering;
   flex-direction: column;
   margin-left: 93px;
-  justify-content: center;
 }
 .footer-input {
   width: 358px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: $shadow;
   border-radius: 4px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
+  padding: 15px 2px 15px 16px;
   margin-right: 12px;
   color: rgba(255, 255, 255, 0.6);
   &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.03em;
+    @include text-base(null, 16px, 1.25, 0.03em);
+    @extend %align-centering;
     color: rgba(255, 255, 255, 0.6);
   }
 }
@@ -113,23 +92,19 @@
   margin-top: 20px;
 }
 .footer-form-btn {
+  @include text-base(700, 16px, 1.88, 0.06em);
   width: 200px;
   height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   border: transparent;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
+  @extend %centering;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: $whiteColor;
   background-color: $accentColor;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: $shadow;
   border-radius: 4px;
-  justify-content: center;
 }
 .send-icon {
   margin-left: 10px;

@@ -1,8 +1,6 @@
 .clients-headline {
-  font-size: 36px;
-  line-height: 1.17;
+  @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: $black;
   padding-top: 94px;
   margin-bottom: 50px;
@@ -13,8 +11,7 @@
   padding-bottom: 94px;
 }
 .clients-icon-link {
-  display: flex;
-  justify-content: center;
+  @extend %centering;
   align-items: center;
   width: 170px;
   height: 92px;

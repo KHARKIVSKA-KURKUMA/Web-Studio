@@ -1,16 +1,12 @@
 .content-list-btn {
   margin-bottom: 50px;
-  display: flex;
+  @extend %centering;
   column-gap: 8px;
-  justify-content: center;
 }
 .content-btn {
+  @include text-base(500, 16px, 1.63, 0.03em);
   height: 38px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
   text-align: center;
-  letter-spacing: 0.03em;
   color: $black;
   border: transparent;
   border-radius: 4px;
@@ -52,9 +48,7 @@
 }
 .content-desk {
   position: absolute;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
+  @include text-base(null, 18px, 1.56, 0.03em);
   color: $whiteColor;
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
@@ -74,15 +68,11 @@
   border-top: transparent;
 }
 .content-caption {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  @include text-base(null, 18px, 2, 0.06em);
   color: $black;
   margin-bottom: 4px;
 }
 .content-subtitle {
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
+  @include text-base(null, 16px, 1.88, 0.03em);
   color: $greyColor;
 }

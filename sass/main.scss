@@ -1,6 +1,8 @@
 /* ---------------------------------- utils --------------------------------- */
 @import './utils/var';
 @import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixin';
 /* ---------------------------------- base ---------------------------------- */
 @import './base/reset';
 @import './base/common';

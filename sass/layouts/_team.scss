@@ -2,10 +2,8 @@
   background: $colorBackground;
 }
 .team-heading {
-  font-size: 36px;
-  line-height: 1.17;
+  @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 .team-list {
@@ -13,7 +11,7 @@
   column-gap: 30px;
 }
 .team-employee {
-  width: 428;
+  width: 428px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -24,29 +22,22 @@
   border-radius: 0px 0px 4px 4px;
 }
 .team-employee-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include text-base(500, 16px, 1.19, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
 .team-employee-position {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include text-base(null, 16px, 1.19, 0.03em);
   text-align: center;
   color: $greyColor;
   margin-bottom: 16px;
 }
 .team-soc-list {
-  display: flex;
-  justify-content: center;
+  @extend %centering;
   column-gap: 10px;
 }
 .team-soc-link {
-  display: flex;
-  justify-content: center;
+  @extend %centering;
   align-items: center;
   width: 44px;
   height: 44px;

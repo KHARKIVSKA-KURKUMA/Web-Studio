@@ -6,20 +6,16 @@
   column-gap: 30px;
 }
 .benefits-heading {
-  font-size: 36px;
-  line-height: 1.17;
+  @include text-base(null, 36px, 1.17, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 .benefits-inner {
   position: relative;
 }
 .benefits-desc {
-  font-size: 14px;
-  line-height: 1.14;
+  @include text-base(null, 14px, 1.14, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $whiteColor;
   padding-top: 27px;

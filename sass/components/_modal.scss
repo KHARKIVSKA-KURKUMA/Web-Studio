@@ -38,11 +38,8 @@
   }
 }
 .modal-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include text-base(700, 20px, 1.15, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: $black;
   margin-bottom: 12px;
 }
@@ -88,29 +85,23 @@
     outline-color: $accentColor;
   }
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include text-base(null, 12px, 1.17, 0.01em);
     color: rgba(117, 117, 117, 0.5);
   }
 }
 .form-btn-send {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
-  align-items: center;
+  @include text-base(700, 16px, 1.88, 0.06em);
+  @extend %align-centering;
   text-align: center;
-  letter-spacing: 0.06em;
   color: $whiteColor;
   width: 200px;
   height: 50px;
   background-color: $accentColor;
   margin: 0 auto;
   border: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: $shadow;
   border-radius: 4px;
   padding: 10px 52px;
   transition: background-color $transition;
@@ -121,32 +112,25 @@
 }
 .modal-desc {
   display: block;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include text-base(null, 12px, 1.17, 0.01em);
   color: $greyColor;
   margin-bottom: 4px;
 }
 .modal-agreement {
-  display: flex;
+  @extend %centering;
   margin-bottom: 30px;
-  justify-content: center;
 }
 .agreement-desk {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.71, 0.03em);
   color: $greyColor;
-  display: flex;
-  align-items: center;
+  @extend %align-centering;
   span {
     width: 16px;
     height: 15px;
     border-radius: 4px;
     border: 2px solid $black;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    @extend %centering;
     margin-right: 7px;
     transition: background-color $transition, border-color $transition;
     .agreement-checkbox:focus + & {
@@ -167,9 +151,7 @@
 }
 
 .agreement-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.71, 0.03em);
   text-decoration-line: underline;
   color: $accentColor;
   padding-left: 2px;

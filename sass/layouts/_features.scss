@@ -4,8 +4,7 @@
 }
 .features-icon {
   fill: $black;
-  display: flex;
-  justify-content: center;
+  @extend %centering;
   align-items: center;
   width: 270px;
   height: 120px;
@@ -15,16 +14,12 @@
   padding: 25px 100px;
 }
 .features-subject {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 .features-desc {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text-base(null, 14px, 1.71, 0.03em);
   color: $greyColor;
   max-width: 270px;
 }
