@@ -1,7 +1,7 @@
 .order {
   background-color: $backgroundColor;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -10,21 +10,29 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 .order__headline {
-  @include text-base(900, 44px, 1.36, 0.06em);
+  @include text-base(900, 26px, 1.62, 0.06em);
   text-align: center;
+  max-width: 360px;
   text-transform: uppercase;
   color: $whiteColor;
-  max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include text-base(900, 44px, 1.36, 0.06em);
+    max-width: 696px;
+  }
 }
 .order__btn {
   @include text-base(700, 16px, 1.88, 0.06em);
-  min-width: 216px;
+  min-width: 200px;
   height: 50px;
   display: block;
   align-items: center;

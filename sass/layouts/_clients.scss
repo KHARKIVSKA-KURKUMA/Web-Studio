@@ -1,19 +1,26 @@
 .clients__headline {
-  @include text-base(null, 36px, 1.17, 0.03em);
+  @include text-base(null, 28px, 1.18, 0.03em);
   text-align: center;
   color: $black;
-  padding-top: 94px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include text-base(null, 36px, 1.17, 0.03em);
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   display: flex;
-  column-gap: 30px;
-  padding-bottom: 94px;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 .clients__link {
   @extend %centering;
   align-items: center;
-  width: 170px;
+  width: 130px;
   height: 92px;
   border: 1px solid $icons;
   border-radius: 5px;
@@ -22,6 +29,15 @@
   &:hover,
   &:focus {
     border: 1px solid $accentColor;
+  }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 .clients__icon {

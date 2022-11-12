@@ -2,15 +2,28 @@
   background: $backgroundColor;
   padding-top: 60px;
   padding-bottom: 60px;
-  &__container {
-    display: flex;
-    justify-content: space-between;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    text-align: left;
   }
 }
 .footer__logo {
   @extend %logo-styles;
   span {
     color: $whiteColor;
+  }
+}
+.footer__wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 .meta__address {
@@ -35,19 +48,32 @@
   }
 }
 .footer__social {
-  @extend %centering;
-  flex-direction: column;
-  margin-left: 70px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 .social__title {
   color: $whiteColor;
   @include text-base(700, 14px, 1.71, 0.03em);
   text-transform: uppercase;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+  }
 }
 .social__list {
   display: flex;
   column-gap: 10px;
+  justify-content: center;
 }
 .social__link {
   @extend %centering;
@@ -67,9 +93,12 @@
   fill: $whiteColor;
 }
 .footer__subscribe {
-  @extend %centering;
-  flex-direction: column;
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 93px;
+  }
 }
 .subscribe__title {
   color: $whiteColor;
@@ -77,24 +106,43 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   display: block;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .footer__send {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and(min-width:1200px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 .send__input {
-  width: 358px;
+  width: 290px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: $shadow;
   border-radius: 4px;
   padding: 15px 2px 15px 16px;
-  margin-right: 12px;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
   &::placeholder {
     @include text-base(null, 16px, 1.25, 0.03em);
     @extend %align-centering;
     color: rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 .send__btn {
