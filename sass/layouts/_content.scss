@@ -1,7 +1,13 @@
 .content__menu {
   margin-bottom: 50px;
-  @extend %centering;
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 8px;
+  row-gap: 15px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    row-gap: 0px;
+  }
 }
 .menu__btn {
   @include text-base(500, 16px, 1.63, 0.03em);
@@ -10,7 +16,7 @@
   color: $black;
   border: transparent;
   border-radius: 4px;
-  padding: 6px 22px;
+  padding: 6px 25px;
   transition: color $transition, background-color $transition,
     box-shadow $transition;
   &:hover,
@@ -27,12 +33,31 @@
   flex-wrap: wrap;
 }
 .posters__item {
-  width: 370px;
-  height: 404px;
+  width: 290px;
+  border: 1px solid $borderColor;
+  border-top: transparent;
   transition: box-shadow $transition;
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 0px) / 1);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    border: 1px solid $borderColor;
+    border-top: transparent;
+    &:nth-child(-n + 2) {
+      height: 440px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(((100% - 90px) / 3) + 10px);
+    border: transparent;
+    &:nth-child(-n + 2) {
+      height: 410px;
+    }
   }
 }
 .posters__holder {
@@ -41,10 +66,10 @@
 }
 .posters__desk {
   position: absolute;
-  @include text-base(null, 18px, 1.56, 0.03em);
+  @include text-base(null, 17px, 1.56, 0.03em);
   color: $whiteColor;
   background: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+  padding: 22px;
   top: 0;
   width: 100%;
   transform: translateY(100%);
@@ -54,11 +79,29 @@
   .posters__item:focus & {
     transform: translateY(0%);
   }
+  @media screen and (min-width: 480px) {
+    @include text-base(null, 18px, 1.56, 0.03em);
+    padding: 110px 24px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px 77px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 .posters__container {
-  padding: 20px 24px;
-  border: 1px solid $borderColor;
-  border-top: transparent;
+  padding: 20px 20px;
+  // border: 1px solid $borderColor;
+  // border-top: transparent;
+  @media screen and (min-width: 768px) {
+    border: transparent;
+  }
+  @media screen and (min-width: 1200px) {
+    border: 1px solid $borderColor;
+    border-top: transparent;
+    padding: 20px 24px;
+  }
 }
 .posters__caption {
   @include text-base(null, 18px, 2, 0.06em);

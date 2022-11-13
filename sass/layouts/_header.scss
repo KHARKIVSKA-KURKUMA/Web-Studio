@@ -11,7 +11,12 @@
   }
 }
 .header__navigation {
-  margin-left: 93px;
+  @media screen and (min-width: 768px) {
+    margin-left: 87px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 92px;
+  }
 }
 .navigation__list {
   display: flex;
@@ -31,9 +36,14 @@
 .header__connect {
   margin-left: auto;
   display: flex;
-  column-gap: 50px;
+  row-gap: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    column-gap: 30px;
+  }
 }
 .connect__contact {
   @include text-base(500, 14px, 1.14, 0.02em);
@@ -42,6 +52,12 @@
   &:hover,
   &:focus {
     color: $accentColor;
+  }
+  @media screen and (min-width: 768px) {
+    @include text-base(500, 12px, 1.18, 0.02em);
+  }
+  @media screen and (min-width: 1200px) {
+    @include text-base(500, 14px, 1.14, 0.02em);
   }
 }
 .connect__icon {
