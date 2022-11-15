@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     &__container {
       display: flex;
       justify-content: space-between;
@@ -18,11 +18,11 @@
   }
 }
 .footer__wrap {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 0;
   }
 }
@@ -50,12 +50,12 @@
 .footer__social {
   margin-top: 60px;
   margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-bottom: 0;
     margin-top: 0;
     margin-left: 165px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-left: 70px;
     margin-bottom: 0;
     margin-top: 0;
@@ -66,7 +66,7 @@
   @include text-base(700, 14px, 1.71, 0.03em);
   text-transform: uppercase;
   margin-bottom: 20px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 12px;
   }
 }
@@ -93,7 +93,7 @@
   fill: $whiteColor;
 }
 .footer__subscribe {
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -106,7 +106,7 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   display: block;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     text-align: left;
   }
 }
@@ -134,13 +134,13 @@
     @extend %align-centering;
     color: rgba(255, 255, 255, 0.6);
   }
-  @media screen and (min-width: 480px) {
+  @include mobile {
     width: 450px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: 450px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 358px;
     margin-right: 12px;
   }

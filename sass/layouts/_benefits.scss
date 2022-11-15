@@ -1,5 +1,9 @@
 .benefits {
-  padding-bottom: 94px;
+  display: none;
+  @include desktop {
+    padding-bottom: 94px;
+    display: block;
+  }
 }
 .benefits__heading {
   @include text-base(null, 36px, 1.17, 0.03em);

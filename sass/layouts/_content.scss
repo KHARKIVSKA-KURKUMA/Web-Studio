@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   column-gap: 8px;
   row-gap: 15px;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     justify-content: center;
     row-gap: 0px;
   }
@@ -41,10 +41,10 @@
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  @media screen and (min-width: 480px) {
+  @include mobile {
     width: calc((100% - 0px) / 1);
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     width: calc((100% - 30px) / 2);
     border: 1px solid $borderColor;
     border-top: transparent;
@@ -52,7 +52,7 @@
       height: 440px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: calc(((100% - 90px) / 3) + 10px);
     border: transparent;
     &:nth-child(-n + 2) {
@@ -79,14 +79,14 @@
   .posters__item:focus & {
     transform: translateY(0%);
   }
-  @media screen and (min-width: 480px) {
+  @include mobile {
     @include text-base(null, 18px, 1.56, 0.03em);
     padding: 110px 24px;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding: 49px 24px 77px 24px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding: 63px 24px;
   }
 }
@@ -94,10 +94,10 @@
   padding: 20px 20px;
   // border: 1px solid $borderColor;
   // border-top: transparent;
-  @media screen and (min-width: 768px) {
+  @include tablet {
     border: transparent;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     border: 1px solid $borderColor;
     border-top: transparent;
     padding: 20px 24px;

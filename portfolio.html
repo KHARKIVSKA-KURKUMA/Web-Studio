@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,12 +34,14 @@
         <nav class="navigation header__navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link link">Студія</a>
+              <a
+                href="./index.html"
+                class="navigation__link navigation__active--pages link"
+                >Студія</a
+              >
             </li>
             <li class="navigation__item">
-              <a
-                href="./portfolio.html"
-                class="navigation__link navigation__active--pages link"
+              <a href="./portfolio.html" class="navigation__link link"
                 >Портфоліо</a
               >
             </li>
@@ -47,9 +52,12 @@
         </nav>
         <ul class="connect header__connect list">
           <li class="connect__item">
-            <a href="mailto:info@devstudio.com" class="connect__contact link">
-              <svg class="connect__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
+            <a
+              href="mailto:info@devstudio.com"
+              class="connect__contact link"
+            >
+              <svg class="connect__icon" width="14" height="10">
+                <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
@@ -57,11 +65,81 @@
           <li class="connect__item">
             <a href="tel:+380961111111" class="connect__contact link">
               <svg class="connect__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-smartphone"></use></svg
+                <use href="./images/icons.svg#icon-tel"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="header__btn" data-menu-open>
+          <svg class="btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- ---------------------------- Мобільне меню ---------------------------- -->
+      <div class="menu header__menu__mobile is-hidden" data-menu>
+        <div class="menu__container">
+          <button type="button" class="menu__close" data-menu-close>
+            <svg class="menu__close__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="menu__mobile__navigation">
+            <ul class="menu__mobile__list list">
+              <li class="menu__mobile__item">
+                <a href="./index.html" class="menu__mobile__link link"
+                  >Студія</a
+                >
+              </li>
+              <li class="menu__mobile__item">
+                <a
+                  href="./portfolio.html"
+                  class="menu__mobile__link menu__mobile--active link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="menu__mobile__item">
+                <a href="" class="menu__mobile__link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__mobile__connect__wrap">
+            <ul class="menu__mobile__connect list">
+              <li class="menu__mobile__connect__item">
+                <a
+                  href="tel:+380961111111"
+                  class="menu__mobile__contact accent link"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="menu__mobile__connect__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="menu__mobile__contact link"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="menu__social__container">
+            <ul class="menu__mobile__soc list">
+              <li class="menu__mobile__item">
+                <a href="" class="menu__mobile__social link">Instagram</a>
+              </li>
+              <li class="menu__mobile__item">
+                <a href="" class="menu__mobile__social link">Twitter</a>
+              </li>
+              <li class="menu__mobile__item">
+                <a href="" class="menu__mobile__social link">Facebook</a>
+              </li>
+              <li class="menu__mobile__item">
+                <a href="" class="menu__mobile__social link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- ----------------------------------------------------------------------- -->
@@ -102,7 +180,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -123,7 +202,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -146,7 +226,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -167,7 +248,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -188,7 +270,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -209,11 +292,14 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
-                  <h2 class="posters__caption">Inspiration has no Borders</h2>
+                  <h2 class="posters__caption">
+                    Inspiration has no Borders
+                  </h2>
                   <p class="posters__subtitle">Веб-сайт</p>
                 </div>
               </a>
@@ -230,7 +316,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -251,7 +338,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -272,7 +360,8 @@
                   <p class="posters__desk">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
+                    отримати вичерпні відомості про компанію чи приватну
+                    особу.
                   </p>
                 </div>
                 <div class="posters__container">
@@ -292,14 +381,22 @@
         <div class="footer__wrap">
           <div class="footer__holder">
             <h1 class="visually-hidden">Контакти</h1>
-            <a href="./index.html" class="logo footer__logo link" lang="en">
+            <a
+              href="./index.html"
+              class="logo footer__logo link"
+              lang="en"
+            >
               Web<span class="white">Studio</span>
             </a>
             <address class="meta">
-              <p class="meta__address link">м. Київ, пр-т Лесі Українки, 26</p>
+              <p class="meta__address link">
+                м. Київ, пр-т Лесі Українки, 26
+              </p>
               <ul class="meta__list list">
                 <li class="meta__item">
-                  <a href="mailto:info@example.com" class="meta__contact link"
+                  <a
+                    href="mailto:info@example.com"
+                    class="meta__contact link"
                     >info@example.com</a
                   >
                 </li>
@@ -370,5 +467,6 @@
       </div>
     </footer>
     <!-- ----------------------------------------------------------------------- -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
