@@ -603,6 +603,9 @@ body {
   }
 }
 
+.features__item {
+  width: calc((100% - 0px) / 1);
+}
 @media screen and (min-width: 768px) {
   .features__item {
     width: calc((100% - 30px) / 2);
