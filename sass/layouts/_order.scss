@@ -9,20 +9,25 @@
   max-width: 100%;
   margin: 0 auto;
   @include retina {
-    background-image: $bgGradient, url(../images/order/order-bg-mob-2x-min.jpg);
+    background-image: $bgGradient,
+      url(../images/order/order-bg-mob-2x-min.jpg);
   }
   @include tablet {
-    background-image: $bgGradient, url(../images/order/order-bg-tab-min.jpg);
+    background-image: $bgGradient,
+      url(../images/order/order-bg-tab-min.jpg);
     @include retina {
-      background-image: $bgGradient, url(../images/order/order-bg-tab-2x-min.jpg);
+      background-image: $bgGradient,
+        url(../images/order/order-bg-tab-2x-min.jpg);
     }
   }
   @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: $bgGradient, url(../images/order/order-bg-min.jpg);
+    max-width: 1600px;
     @include retina {
-      background-image: $bgGradient, url(../images/order/order-bg-2x-min.jpg);
+      background-image: $bgGradient,
+        url(../images/order/order-bg-2x-min.jpg);
     }
   }
 }

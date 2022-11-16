@@ -8,16 +8,26 @@
 }
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 320px;
+  min-width: 320px;
   background-color: $whiteColor;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+    min-width: 450px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+    min-width: 600px;
+  }
 }
 .modal-close-btn {
   position: absolute;
@@ -38,10 +48,13 @@
   }
 }
 .modal-title {
-  @include text-base(700, 20px, 1.15, 0.03em);
+  @include text-base(700, 20px, 1.5, 0.03em);
   text-align: center;
   color: $black;
   margin-bottom: 12px;
+  @include desktop {
+    @include text-base(700, 20px, 1.15, 0.03em);
+  }
 }
 .form-input {
   width: 100%;
@@ -121,7 +134,7 @@
   margin-bottom: 30px;
 }
 .agreement-desk {
-  @include text-base(null, 14px, 1.71, 0.03em);
+  @include text-base(null, 7px, 1.17, 0.03em);
   color: $greyColor;
   @extend %align-centering;
   span {
@@ -141,6 +154,12 @@
       border-color: $accentColor;
     }
   }
+  @include mobile {
+    @include text-base(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include text-base(null, 14px, 1.71, 0.03em);
+  }
 }
 .check-icon {
   fill: transparent;
@@ -151,10 +170,16 @@
 }
 
 .agreement-link {
-  @include text-base(null, 14px, 1.71, 0.03em);
+  @include text-base(null, 7px, 1.17, 0.03em);
   text-decoration-line: underline;
   color: $accentColor;
   padding-left: 2px;
+  @include mobile {
+    @include text-base(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include text-base(null, 14px, 1.71, 0.03em);
+  }
 }
 
 .is-hidden {
