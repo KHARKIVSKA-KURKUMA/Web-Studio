@@ -1,0 +1,23 @@
+/* ---------------------------------- utils --------------------------------- */
+@import './utils/var';
+@import './utils/hidden';
+@import './utils/mixin';
+@import './utils/placeholders';
+/* ---------------------------------- base ---------------------------------- */
+@import './base/reset';
+@import './base/common';
+/* ------------------------------- components ------------------------------- */
+@import './components/container';
+@import './components/modal';
+/* --------------------------------- layouts -------------------------------- */
+@import './layouts/header';
+@import './layouts/features';
+@import './layouts/order';
+@import './layouts/benefits';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/footer';
+@import './layouts/content';
+@import './layouts/contacts';
+/* ------------------------------- components ------------------------------- */
+@import './components/active';

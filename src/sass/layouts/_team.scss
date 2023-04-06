@@ -1,0 +1,76 @@
+.team {
+  background: $colorBackground;
+}
+.team__heading {
+  @include text-base(null, 28px, 1.18, 0.03em);
+  text-align: center;
+  margin-bottom: 30px;
+  @include desktop {
+    @include text-base(null, 36px, 1.17, 0.03em);
+    margin-bottom: 50px;
+  }
+}
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+.team__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  @include tablet {
+    width: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+}
+.team__employee {
+  padding: 30px 5px;
+  padding-bottom: 24px;
+  background-color: $whiteColor;
+  border-radius: 0px 0px 4px 4px;
+  @include desktop {
+    padding-bottom: 30px;
+  }
+}
+.employee__name {
+  @include text-base(500, 16px, 1.19, 0.03em);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.employee__position {
+  @include text-base(null, 16px, 1.19, 0.03em);
+  text-align: center;
+  color: $greyColor;
+  margin-bottom: 16px;
+}
+.employee__soc {
+  @extend %centering;
+  column-gap: 10px;
+}
+.employee__link {
+  @extend %centering;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: border-radius, background-color $transition;
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    border-radius: 50%;
+  }
+}
+.employee__icon {
+  fill: $icons;
+  transition: fill $transition;
+  .employee__link:hover &,
+  .employee__link:focus & {
+    fill: $whiteColor;
+  }
+}

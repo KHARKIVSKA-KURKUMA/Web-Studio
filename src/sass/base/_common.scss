@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $black;
+  cursor: url('../images/cursor.cur'), default;
+}
+
+a,
+button {
+  &:hover,
+  &:focus {
+    cursor: url('../images/cursor.cur'), auto;
+  }
+}
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

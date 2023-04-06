@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}
+.menu__container {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @include mobile {
+    width: 480px;
+  }
+}

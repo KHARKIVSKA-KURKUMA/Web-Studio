@@ -1,0 +1,51 @@
+.clients__headline {
+  @include text-base(null, 28px, 1.18, 0.03em);
+  text-align: center;
+  color: $black;
+  margin-bottom: 30px;
+  @include desktop {
+    @include text-base(null, 36px, 1.17, 0.03em);
+    margin-bottom: 50px;
+  }
+}
+.clients__list {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+.clients__link {
+  @extend %centering;
+  align-items: center;
+  width: 130px;
+  height: 92px;
+  border: 1px solid $icons;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: border $transition;
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+  @include mobile {
+    width: 210px;
+  }
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
+    width: 170px;
+  }
+}
+.clients__icon {
+  fill: $icons;
+  transition: fill $transition;
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $accentColor;
+  }
+}

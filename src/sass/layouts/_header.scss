@@ -1,0 +1,198 @@
+.header {
+  border-bottom: 1px solid $headerBorder;
+  &__container {
+    @extend %align-centering;
+  }
+}
+.header__logo {
+  @extend %logo-styles;
+  span {
+    color: $black;
+  }
+}
+.header__btn {
+  margin-left: auto;
+  border: transparent;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include tablet {
+    display: none;
+  }
+}
+.header__menu__mobile {
+  position: fixed;
+  z-index: 1;
+  background-color: $whiteColor;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  @include tablet {
+    display: none;
+  }
+}
+.menu__close {
+  position: absolute;
+  border: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px 12px;
+  top: 10px;
+  right: 15px;
+}
+.menu__close__icon {
+  transition: fill $transition;
+  .menu__close:hover &,
+  .menu__close:focus & {
+    fill: $accentColor;
+  }
+}
+.menu__mobile__navigation {
+  margin-top: 48px;
+}
+.menu__mobile__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 30px;
+}
+.menu__mobile__link {
+  @include text-base(500, 35px, 1.18, 0.02em);
+  color: $black;
+  @include mobile {
+    @include text-base(500, 40px, 1.18, 0.02em);
+  }
+}
+.menu__mobile__connect__wrap {
+  position: absolute;
+  bottom: 64px;
+}
+.menu__mobile__connect {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+.menu__mobile__contact {
+  @include text-base(500, 19px, 1.17, 0.02em);
+  color: $greyColor;
+  transition: color $transition;
+  @include mobile {
+    @include text-base(500, 24px, 1.17, 0.02em);
+  }
+  &:hover,
+  &:focus {
+    @include text-base(500, 26px, 1.18, 0.02em);
+    color: $accentColor;
+    @include mobile {
+      @include text-base(500, 34px, 1.18, 0.02em);
+    }
+  }
+}
+.accent {
+  @include text-base(500, 26px, 1.18, 0.02em);
+  color: $accentColor;
+  @include mobile {
+    @include text-base(500, 34px, 1.18, 0.02em);
+  }
+}
+.menu__social__container {
+  position: absolute;
+  bottom: 0;
+}
+.menu__mobile__soc {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.menu__mobile__item {
+  &:last-child {
+    ::after {
+      display: none;
+    }
+  }
+}
+.menu__mobile__social {
+  @include text-base(500, 12px, 1.22, 0.02em);
+  color: $accentColor;
+  position: relative;
+  &::after {
+    content: ' ';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: -10px;
+    background: rgba(33, 33, 33, 0.2);
+  }
+  @include mobile {
+    @include text-base(500, 18px, 1.22, 0.02em);
+  }
+}
+.header__navigation {
+  display: none;
+  @include tablet {
+    margin-left: 87px;
+    display: block;
+  }
+  @include desktop {
+    margin-left: 92px;
+  }
+}
+.navigation__list {
+  display: flex;
+  column-gap: 50px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.navigation__link {
+  @include text-base(500, 14px, 1.14, 0.02em);
+  color: $black;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+.header__connect {
+  margin-left: auto;
+  row-gap: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.connect__contact {
+  @include text-base(500, 14px, 1.14, 0.02em);
+  color: $greyColor;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+  @include tablet {
+    @include text-base(500, 12px, 1.17, 0.02em);
+  }
+  @include desktop {
+    @include text-base(500, 14px, 1.14, 0.02em);
+  }
+}
+.connect__icon {
+  fill: $icons;
+  margin-right: 10px;
+  transition: fill $transition;
+  .connect__contact:hover &,
+  .connect__contact:focus & {
+    fill: $accentColor;
+  }
+}

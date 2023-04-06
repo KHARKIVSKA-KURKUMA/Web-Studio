@@ -1,0 +1,192 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity $transition, visibility $transition;
+}
+.modal {
+  position: absolute;
+  width: 320px;
+  min-width: 320px;
+  background-color: $whiteColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+    min-width: 450px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+    min-width: 600px;
+  }
+}
+.modal-close-btn {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  background-color: $whiteColor;
+}
+.modal-close-icon {
+  transition: fill $transition;
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus & {
+    fill: $accentColor;
+  }
+}
+.modal-title {
+  @include text-base(700, 20px, 1.5, 0.03em);
+  text-align: center;
+  color: $black;
+  margin-bottom: 12px;
+  @include desktop {
+    @include text-base(700, 20px, 1.15, 0.03em);
+  }
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: outline-color $transition;
+  &:focus {
+    outline-color: $accentColor;
+  }
+}
+.input-wrap {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: fill $transition;
+  .form-input:focus + & {
+    fill: $accentColor;
+  }
+}
+.input-filed {
+  margin-bottom: 10px;
+}
+.input-filed-comment {
+  margin-bottom: 20px;
+}
+.form-input-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  transition: outline-color $transition;
+  &:focus {
+    outline-color: $accentColor;
+  }
+  &::placeholder {
+    @include text-base(null, 12px, 1.17, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.form-btn-send {
+  font-family: 'Roboto';
+  font-style: normal;
+  @include text-base(700, 16px, 1.88, 0.06em);
+  @extend %align-centering;
+  text-align: center;
+  color: $whiteColor;
+  width: 200px;
+  height: 50px;
+  background-color: $accentColor;
+  margin: 0 auto;
+  border: transparent;
+  box-shadow: $shadow;
+  border-radius: 4px;
+  padding: 10px 52px;
+  transition: background-color $transition;
+  &:hover,
+  &:focus {
+    background-color: $blueColor;
+  }
+}
+.modal-desc {
+  display: block;
+  @include text-base(null, 12px, 1.17, 0.01em);
+  color: $greyColor;
+  margin-bottom: 4px;
+}
+.modal-agreement {
+  @extend %centering;
+  margin-bottom: 30px;
+}
+.agreement-desk {
+  @include text-base(null, 7px, 1.17, 0.03em);
+  color: $greyColor;
+  @extend %align-centering;
+  span {
+    width: 16px;
+    height: 15px;
+    border-radius: 4px;
+    border: 2px solid $black;
+    align-items: center;
+    @extend %centering;
+    margin-right: 7px;
+    transition: background-color $transition, border-color $transition;
+    .agreement-checkbox:focus + & {
+      border-color: $accentColor;
+    }
+    .agreement-checkbox:checked + & {
+      background-color: $accentColor;
+      border-color: $accentColor;
+    }
+  }
+  @include mobile {
+    @include text-base(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include text-base(null, 14px, 1.71, 0.03em);
+  }
+}
+.check-icon {
+  fill: transparent;
+  transition: fill $transition;
+  .agreement-checkbox:checked + .agreement-desk & {
+    fill: $whiteColor;
+  }
+}
+
+.agreement-link {
+  @include text-base(null, 7px, 1.17, 0.03em);
+  text-decoration-line: underline;
+  color: $accentColor;
+  padding-left: 2px;
+  @include mobile {
+    @include text-base(null, 12px, 1.17, 0.03em);
+  }
+  @include desktop {
+    @include text-base(null, 14px, 1.71, 0.03em);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.no-scroll {
+  overflow: hidden;
+}

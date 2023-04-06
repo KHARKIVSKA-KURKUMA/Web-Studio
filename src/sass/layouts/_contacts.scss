@@ -1,0 +1,169 @@
+.contacts {
+  background: $backgroundColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  @include desktop {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    text-align: left;
+  }
+  .container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.contacts__title {
+  color: $whiteColor;
+  @include text-base(700, 44px, 1.71, 0.03em);
+  margin-bottom: 20px;
+  @include tablet {
+    padding-top: 12px;
+    @include text-base(700, 54px, 1.71, 0.03em);
+  }
+}
+.contacts__wrap {
+  @include tablet {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+.meta__contacts__desk {
+  @include text-base(null, 12px, 1.5, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+  @include tablet {
+    @include text-base(null, 15px, 1.5, 0.03em);
+  }
+}
+.meta__contacts__address {
+  @include text-base(700, 15px, 1, 0.03em);
+  color: $whiteColor;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  .meta__contacts__icon {
+    margin-left: -3px;
+  }
+  @include tablet {
+    @include text-base(700, 20px, 1, 0.03em);
+  }
+}
+.meta__contacts__item {
+  margin-bottom: 17px;
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
+.meta__contacts__icon {
+  fill: $whiteColor;
+  width: 15px;
+  height: 15px;
+  transition: fill $transition;
+  margin-right: 10px;
+  .meta__contact__link:hover &,
+  .meta__contact__link:focus & {
+    fill: $accentColor;
+  }
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
+}
+.meta__contact__link {
+  @include text-base(700, 15px, 1, 0.03em);
+  color: $whiteColor;
+  transition: color $transition;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  display: block;
+  &:focus,
+  &:hover {
+    color: $accentColor;
+  }
+  @include tablet {
+    @include text-base(700, 20px, 1, 0.03em);
+  }
+}
+.contacts__social {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.social__contacts__title {
+  color: $whiteColor;
+  @include text-base(700, 20px, 1.71, 0.03em);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  @include tablet {
+    padding-top: 12px;
+    margin-top: 15px;
+  }
+}
+.social__contacts__list {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+.social__link {
+  @extend %centering;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color, border-radius, $transition;
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    border-radius: 50%;
+  }
+}
+.social__icon {
+  fill: $whiteColor;
+}
+.map {
+  border-radius: 72px;
+  width: 320px;
+  height: 390px;
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 600px;
+  }
+  @include desktop {
+    height: 518px;
+  }
+}
+.map__container {
+  border-radius: 72px;
+  border: 5px solid $accentColor;
+  width: 330px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: rgba(33, 149, 243, 0.9);
+  @include mobile {
+    width: 460px;
+  }
+  @include tablet {
+    width: 610px;
+  }
+  @include desktop {
+    height: 528px;
+  }
+}
