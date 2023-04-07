@@ -1,12 +1,12 @@
 .footer {
   background: $backgroundColor;
   padding-top: 60px;
-  padding-bottom: 60px;
   text-align: center;
   @include desktop {
     &__container {
       display: flex;
       justify-content: space-between;
+      padding-bottom: 60px;
     }
     text-align: left;
   }
@@ -167,4 +167,13 @@
 .send__icon {
   margin-left: 10px;
   fill: $whiteColor;
+}
+.watermark__item {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $greyColor;
+  padding-top: 5px;
+  .rights__item {
+    color: $whiteColor;
+  }
 }
